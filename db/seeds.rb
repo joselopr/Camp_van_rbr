@@ -10,16 +10,17 @@ require 'faker'
 
 puts "Destroying vans"
 
-# Destroy all models
-Van.destroy.all if Rails.env.development
+### Destroy all models
+
+Van.destroy_all #if Rails.env.development
 
 puts "Destroying users"
-User.destroy.all if Rails.env.development
+User.destroy_all #if Rails.env.development
 
 puts "Destroying bookings"
-Booking.destroy.all if Rails.env.development
+Booking.destroy_all #if Rails.env.development
 
-# Create all models
+### Create all models
 puts "Creating a new user"
 
 first_name = "Bob" # or => Faker::Name.first_name
@@ -28,8 +29,8 @@ last_name = "Kane" # or => Faker::Name.last_name
 user = User.new(
   email: "#{first_name}@email.com",
   password: "123456",
-  first_name: first_name,
-  last_name: last_name
+  # first_name: first_name,
+  # last_name: last_name
   )
 
 user.save!
@@ -39,11 +40,11 @@ puts "Creating a new van"
 van = Van.new(
   user_id: user.id,
   capacity: 2,
-  day_pice: 50,
+  day_price: 50,
   brand: "Ford",
   model: "Transit",
   location_address: "IJsbaanpad 9, 1076 CV Amsterdam",
-  description: Faker::paragraph(sentence_count: 3)
+  description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
 van.save!

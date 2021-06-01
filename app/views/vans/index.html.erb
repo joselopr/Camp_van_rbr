@@ -1,0 +1,14 @@
+<h1>All vans</h1>
+
+<ul>
+  <% @vans.each do |van| %>
+    <div class="container">
+      <li class="card">
+        <h2><%= van.brand %></h2>
+        <p><%= van.model %></p>
+        <p><%= van.description %></p>
+        <p>€<%= van.day_price %></p>
+      </li>
+    </div>
+  <% end  %>
+</ul>
