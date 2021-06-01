@@ -1,31 +1,31 @@
 class VansController < ApplicationController
 
   def index
-    @vans = Van.all
+    @vans = policy_scope(Van)
   end
 
-  # def show
+  def show
 
-  # end
+  end
 
-  # def new
+  def new
 
-  # end
+  end
 
-  # def create
+  def create
 
-  # end
+  end
 
-  # def edit
+  def edit
 
-  # end
+  end
 
-  # def update
+  def update
 
-  # end
+  end
 
-  # def destroy
+  def destroy
 
-  # end
+  end
 
 end
