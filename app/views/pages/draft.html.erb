@@ -1,0 +1,103 @@
+<!-- Button component -->
+<%= link_to "Book now", "#", class: "btn btn-flat" %>
+
+<!-- Card component -->
+<div class="container">
+  <div class="cards">
+    <!-- Iterate over all vans to create seperate cards -->
+    <!-- Place link around the card-trip to make it a button to show page -->
+    <div class="card-trip">
+      <!-- Should be dynamic image tag, preferabbly cl_image_tag -->
+      <img src="https://www.campervans.be/files/Product/overview-list/campervan-westfalia-amundsen.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <!-- Brand and model should be dynamic -->
+          <h2>Brand Model</h2>
+          <!-- Number should be replaced with dynamic capacity -->
+          <div class="card-trip-capacity">
+            <i class="fas fa-user-friends"></i> 2
+          </div>
+          <!-- Description should be dynamic -->
+          <p>Description of vehicle</p>
+        </div>
+        <!-- Price should be dynamic -->
+        <h2 class="card-trip-pricing">€150 / day</h2>
+      </div>
+    </div>
+
+    <!-- Place link around the card-trip to make it a button to show page -->
+    <div class="card-trip">
+      <!-- Should be dynamic image tag, preferabbly cl_image_tag -->
+      <img src="https://cdn.motor1.com/images/mgl/BjYyj/s1/loef-camper-van.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <!-- Brand and model should be dynamic -->
+          <h2>Brand Model</h2>
+          <!-- Number should be replaced with dynamic capacity -->
+          <div class="card-trip-capacity">
+            <i class="fas fa-user-friends"></i> 2
+          </div>
+          <!-- Description should be dynamic -->
+          <p>Description of vehicle</p>
+        </div>
+        <!-- Price should be dynamic -->
+        <h2 class="card-trip-pricing">€150 / day</h2>
+      </div>
+    </div>
+
+    <!-- Place link around the card-trip to make it a button to show page -->
+    <div class="card-trip">
+      <!-- Should be dynamic image tag, preferabbly cl_image_tag -->
+      <img src="https://i.guim.co.uk/img/media/8a835a2558dc11046038d67e72b7f37c1b6516ea/196_108_2211_1326/master/2211.jpg?width=300&quality=85&auto=format&fit=max&s=82c1e0b08c3bbd335be18f23990dc5ff" />
+      <div class="card-trip-infos">
+        <div>
+          <!-- Brand and model should be dynamic -->
+          <h2>Brand Model</h2>
+          <!-- Number should be replaced with dynamic capacity -->
+          <div class="card-trip-capacity">
+            <i class="fas fa-user-friends"></i> 2
+          </div>
+          <!-- Description should be dynamic -->
+          <p>Description of vehicle</p>
+        </div>
+        <!-- Price should be dynamic -->
+        <h2 class="card-trip-pricing">€150 / day</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container show-van mt-3">
+  <div class="row top-show">
+
+    <div class="show-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.motor1.com/images/mgl/BjYyj/s1/loef-camper-van.jpg)">
+      <!-- Number should be replaced with dynamic capacity -->
+      <div class="card-trip-capacity">
+        <i class="fas fa-user-friends"></i> 2
+      </div>
+    </div>
+    <div class="reservation">
+
+      <div class="form">
+        <!-- Price should be dynamic -->
+        <h4 class="card-trip-pricing">€150 / day</h4>
+        <form action="">
+          <label for="start_date">Start date:</label><br>
+          <input type="date" name="start"><br>
+          <label for="end_date">End date:</label><br>
+          <input type="date" name="end">
+        </form>
+        <h3>Total price €300</h3>
+        <%= link_to "Book now", "#", class: "btn btn-flat" %>
+      </div>
+    </div>
+  </div>
+  <div class="van-info mt-3">
+    <div>
+      <!-- Brand and model should be dynamic -->
+      <h2>Brand Model</h2>
+      <!-- Description should be dynamic -->
+      <p>Description of vehicle</p>
+    </div>
+  </div>
+</div>
