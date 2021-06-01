@@ -16,19 +16,17 @@ class VansController < ApplicationController
   # end
 
   # def edit
-
   # end
 
   # def update
-
   # end
 
   # def destroy
-
   # end
   private
 
   def set_van
     @van = Van.find(params[:id])
+    authorize @van
   end
 end

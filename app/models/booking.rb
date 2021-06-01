@@ -9,3 +9,4 @@ class Booking < ApplicationRecord
   # validates :end_date, presence: true, date: { after_or_equal_to: :start_date }
 end
 
+
