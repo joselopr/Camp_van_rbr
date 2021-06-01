@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :vans
 
-  validates :first_name, presence: true, uniqueness: true, length: { minimum: 3 }
-  validates :last_name, presence: true, uniqueness: true, length: { minimum: 3 }
+  # validates_associated :vans, :bookings
+
+  validates :first_name, presence: true, length: { minimum: 2 }
+  validates :last_name, presence: true, length: { minimum: 2 }
 end
