@@ -1,3 +1,51 @@
-.show-image {
-  width: 100%;
+.show-van, .top-show {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.top-show {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 16px;
+}
+
+.show-van .show-image {
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 400px;
+  border-radius: 4px;
+  padding: 0;
+    position: relative;
+}
+
+.show-van .form {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.show-image .card-trip-capacity {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 80px;
+  font-size: 32px;
+  color: rgba(230,230,230,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.show-van h4 {
+  color: rgba(50,50,50,0.8);
+}
+.van-info {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 16px;
+  border-radius: 4px;
 }
