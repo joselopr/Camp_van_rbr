@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+# gem pundit Add.
+gem 'pundit'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -31,6 +33,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Gem Devise added /////////----------
 gem 'devise'
 gem 'faker'
+# gem pundit Add.
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
