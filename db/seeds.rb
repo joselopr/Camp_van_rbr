@@ -29,8 +29,8 @@ last_name = "Kane" # or => Faker::Name.last_name
 user = User.new(
   email: "#{first_name}@email.com",
   password: "123456",
-  # first_name: first_name,
-  # last_name: last_name
+  first_name: first_name,
+  last_name: last_name
   )
 
 user.save!
