@@ -4,10 +4,10 @@ class VansController < ApplicationController
     @vans = policy_scope(Van)
 
     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
-    @markers = @flats.geocoded.map do |flat|
+    @markers = @vans.geocoded.map do |van|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: van.latitude,
+        lng: van.longitude
       }
     end
   end
