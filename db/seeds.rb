@@ -8,6 +8,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+
+puts "Destroying bookings"
+Booking.destroy_all #if Rails.env.development
+
 puts "Destroying vans"
 
 ### Destroy all models
@@ -16,9 +20,6 @@ Van.destroy_all #if Rails.env.development
 
 puts "Destroying users"
 User.destroy_all #if Rails.env.development
-
-puts "Destroying bookings"
-Booking.destroy_all #if Rails.env.development
 
 ### Create all models
 puts "Creating a new user"

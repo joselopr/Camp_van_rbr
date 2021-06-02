@@ -1,6 +1,6 @@
 class Van < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_many :reviews, through: :bookings # <- for van reviews
 
   geocoded_by :address
