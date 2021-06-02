@@ -1,14 +1,33 @@
-<h1>All vans</h1>
-
-<ul>
-  <% @vans.each do |van| %>
-    <div class="container">
-      <li class="card">
-        <h2><%= van.brand %></h2>
-        <p><%= van.model %></p>
-        <p><%= van.description %></p>
-        <p>€<%= van.day_price %></p>
-      </li>
-    </div>
-  <% end  %>
-</ul>
+<div id="container-cards-map" class="container">
+  <div class="cards">
+    <!-- Iterate over all vans to create seperate cards -->
+    <% @vans.each do |van| %>
+    <!-- Place link around the card-trip to make it a button to show page -->
+    <%= link_to van_path(van) do  %>
+        <div class="card-trip">
+          <!-- Should be dynamic image tag, preferabbly cl_image_tag -->
+          <img src="https://source.unsplash.com/800x450/?campervan" />
+          <div class="card-trip-infos">
+            <div>
+              <!-- Brand and model should be dynamic -->
+              <h2><%= "#{van.brand} #{van.model}" %></h2>
+              <!-- Number should be replaced with dynamic capacity -->
+              <div class="card-trip-capacity">
+                <i class="fas fa-user-friends"></i> <%= van.capacity %>
+              </div>
+              <!-- Description should be dynamic -->
+              <p><%= van.description.truncate(60) %></p>
+            </div>
+            <!-- Price should be dynamic -->
+            <h2 class="card-trip-pricing">€<%= van.day_price.round %> / day</h2>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

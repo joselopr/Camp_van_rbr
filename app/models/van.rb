@@ -3,6 +3,9 @@ class Van < ApplicationRecord
   has_many :bookings
   has_many :reviews, through: :bookings # <- for van reviews
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   maximum_description = 1000
   minimum_description = 100
 

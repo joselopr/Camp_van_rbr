@@ -33,6 +33,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Gem Devise added /////////----------
 gem 'devise'
 gem 'faker'
+gem 'geocoder'
 # gem pundit Add.
 
 gem 'autoprefixer-rails', '10.2.5'
