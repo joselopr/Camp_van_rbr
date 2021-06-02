@@ -10,3 +10,33 @@
   background: #eb7128;
   color: white;
 }
+
+
+.btn-flat-ghost {
+  color: #f58f53;
+  padding: 8px 24px;
+  border-radius: 20px;
+  border-color: #f58f53;
+  transition: background 0.2s ease;
+}
+
+.btn-flat-ghost:hover {
+  color: #eb7128;
+  padding: 8px 24px;
+  border-radius: 20px;
+  border-color: #eb7128;
+  transition: background 0.2s ease;
+}
+
+.btn-flat-big {
+  color: white;
+  padding: 12px 32px;
+  border-radius: 20px;
+  background: #f58f53;
+  transition: background 0.2s ease;
+}
+
+.btn-flat-big:hover {
+  background: #eb7128;
+  color: white;
+}
