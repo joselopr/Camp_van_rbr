@@ -2,12 +2,14 @@
   <div class="row">
     <div class="cards col-8">
       <!-- Iterate over all vans to create seperate cards -->
+      <% count = 1  %>
       <% @vans.each do |van| %>
       <!-- Place link around the card-trip to make it a button to show page -->
       <%= link_to van_path(van) do  %>
           <div class="card-trip">
             <!-- Should be dynamic image tag, preferabbly cl_image_tag -->
-            <img src="https://source.unsplash.com/800x450/?campervan" />
+            <img src=<%= "https://source.unsplash.com/800x450/?campervan#{count}"%>/>
+            <% count += 1 %>
             <div class="card-trip-infos">
               <div>
                 <!-- Brand and model should be dynamic -->
