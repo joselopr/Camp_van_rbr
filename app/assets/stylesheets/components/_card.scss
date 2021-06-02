@@ -34,7 +34,6 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -49,6 +48,14 @@
   top: 8px;
   width: 40px;
   color: rgba(50,50,50,0.8);
+}
+
+.card-trip-infos .card-trip-pricing {
+  width: 100px;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  text-align: right;
 }
 
 // Smallest device
