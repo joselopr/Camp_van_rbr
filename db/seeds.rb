@@ -37,7 +37,7 @@ user.save!
 
 puts "Creating a new van"
 
-van = Van.new(
+van1 = Van.new(
   user_id: user.id,
   capacity: 2,
   day_price: 50,
@@ -47,12 +47,96 @@ van = Van.new(
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
-van.save!
+van1.save!
+
+van2 = Van.new(
+  user_id: user.id,
+  capacity: 2,
+  day_price: 75,
+  brand: "VW",
+  model: "Transporter",
+  location_address: "Goudsesingel 580, 3011KS Rotterdam",
+  description: "Classic van with room for 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
+  )
+
+van2.save!
+
+van3 = Van.new(
+  user_id: user.id,
+  capacity: 3,
+  day_price: 80,
+  brand: "Mercedes",
+  model: "Sprinter",
+  location_address: "Damrak 9, 1012 LG Amsterdam",
+  description: "Huge van that up to 3 people can stay in. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
+  )
+
+van3.save!
+
+van4 = Van.new(
+  user_id: user.id,
+  capacity: 2,
+  day_price: 60,
+  brand: "Ford",
+  model: "Transit",
+  location_address: "Spaklerweg 38, 1096 BA Amsterdam",
+  description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
+  )
+
+van4.save!
+
+van5 = Van.new(
+  user_id: user.id,
+  capacity: 2,
+  day_price: 70,
+  brand: "Mercedes",
+  model: "Sprinter",
+  location_address: "Langerstraat 21, 1015 AK Amsterdam",
+  description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
+  )
+
+van5.save!
+
+van6 = Van.new(
+  user_id: user.id,
+  capacity: 2,
+  day_price: 65,
+  brand: "VW",
+  model: "Transporter",
+  location_address: "Buitenveldertselaan 184, 1081 AC Amsterdam",
+  description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
+  )
+
+van6.save!
+
+van7 = Van.new(
+  user_id: user.id,
+  capacity: 2,
+  day_price: 40,
+  brand: "Ford",
+  model: "Transit",
+  location_address: "Plantage Muidergracht 14, 1018 TV Amsterdam",
+  description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
+  )
+
+van7.save!
+
+van8 = Van.new(
+  user_id: user.id,
+  capacity: 3,
+  day_price: 90,
+  brand: "Ford",
+  model: "Transit",
+  location_address: "IJsbaanpad 9, 1076 CV Amsterdam",
+  description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
+  )
+
+van8.save!
 
 puts "Creating a new booking"
 
 booking = Booking.new(
-  van_id: van.id,
+  van_id: van1.id,
   user_id: user.id,
   start_date: Date.new(2021,6,10),
   end_date: Date.new(2021,6,11)
