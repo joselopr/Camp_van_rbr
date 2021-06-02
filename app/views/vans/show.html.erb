@@ -1,1 +1,31 @@
-show.html.erb
+<div class="container show-van mt-3">
+  <div class="row top-show">
+
+    <div class="show-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/800x450/?campervan)">
+      <div class="card-trip-capacity">
+        <i class="fas fa-user-friends"></i> <%= @van.capacity %>
+      </div>
+    </div>
+    <div class="reservation">
+
+      <div class="form">
+        <h4 class="card-trip-pricing">€ <%= @van.day_price %> / day</h4>
+        <form action="">
+          <label for="start_date">Start date:</label><br>
+          <input type="date" name="start"><br>
+          <label for="end_date">End date:</label><br>
+          <input type="date" name="end">
+        </form>
+        <h3>Total price €300</h3>
+        <%= link_to "Book now", "#", class: "btn btn-flat" %>
+      </div>
+    </div>
+  </div>
+  <div class="van-info mt-3">
+    <div>
+      <h2><%= @van.brand %> <%= @van.model %></h2>
+      <p><%= @van.description %></p>
+    </div>
+  </div>
+</div>
+
