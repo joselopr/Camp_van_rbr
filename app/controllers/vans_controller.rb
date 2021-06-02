@@ -15,13 +15,21 @@ class VansController < ApplicationController
   def show
   end
 
-  # def new
+  def new
+    @van = Van.new
+    authorize @van
+  end
 
-  # end
-
-  # def create
-
-  # end
+  def create
+    @van = Van.new(van_params)
+    @van.user = current_user
+    authorize @van
+    if @van.save
+      redirect_to @van, notice: 'Van was successfully created.'
+    else
+      render :new
+    end
+  end
 
   # def edit
   # end
@@ -36,5 +44,9 @@ class VansController < ApplicationController
   def set_van
     @van = Van.find(params[:id])
     authorize @van
+  end
+
+  def van_params
+    params.require(:van).permit(:brand, :model, :capacity, :day_price, :description)
   end
 end
