@@ -7,12 +7,8 @@
 
   <%= link_to root_path, class: "navbar-brand" do %>
     <div class="brand-name">
-      <h2>VanBnb</h2>
+      <%= image_tag "logo.png", alt: "VanBnB", class: "image_logo" %>
     </div>
-  <% end %>
-
-  <%= link_to root_path, class: "navbar-brand" do %>
-     <i class="fas fa-shuttle-van"></i>
   <% end %>
   </div>
 
@@ -28,7 +24,7 @@
 
       <% if user_signed_in? %>
         <li>
-          <%= link_to "Offer your van!", "#", class: "btn btn-flat" %>
+          <%= link_to "Offer your van", new_van_path, class: "btn btn-flat-ghost" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
