@@ -7,6 +7,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require "open-uri"
 
 
 puts "Destroying bookings"
@@ -48,6 +49,9 @@ van1 = Van.new(
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
+file = URI.open('https://images.squarespace-cdn.com/content/v1/5cee2e21687a1500015aefb3/1581542572040-PJZZZ8TLPX62HJZNKWHA/ke17ZwdGBToddI8pDm48kGvciYz_F7e2cKgHl6aKbOB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0jG2lbcDYBOeMi4OFSYem8C6_1umBlU6AyzZibxGd5CiIyYt3UyZsjDc849ulGdbFA/high+ex+web.jpg?format=1000w')
+van1.photo.attach(io: file, filename: 'van-1.png', content_type: 'image/png')
+
 van1.save!
 
 van2 = Van.new(
@@ -59,6 +63,9 @@ van2 = Van.new(
   address: "Goudsesingel 580, 3011KS Rotterdam",
   description: "Classic van with room for 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
+
+file = URI.open('https://res.cloudinary.com/dsykouw6i/image/upload/v1622712955/photo-1601231091320-5ee5140fcd09_zka4wq.jpg')
+van1.photo.attach(io: file, filename: 'van-2.png', content_type: 'image/png')
 
 van2.save!
 
