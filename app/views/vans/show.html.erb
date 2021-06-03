@@ -11,7 +11,7 @@
 
       <div class="form">
         <!-- Price should be dynamic -->
-        <h4 class="card-trip-pricing">€150 / day</h4>
+        <h4 class="card-trip-pricing"> € <%= @van.day_price %> / day</h4>
         <form action="">
           <label for="start_date">Start date:</label><br>
           <input type="date" name="start"><br>
@@ -25,10 +25,8 @@
   </div>
   <div class="van-info mt-3">
     <div>
-      <!-- Brand and model should be dynamic -->
-      <h2>Brand Model</h2>
-      <!-- Description should be dynamic -->
-      <p>Description of vehicle</p>
+      <h2><%= @van.brand %> </h2>
+      <p> <%= @van.description %>  </p>
     </div>
   </div>
 </div>
