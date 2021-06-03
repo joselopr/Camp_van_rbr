@@ -25,3 +25,12 @@
   opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,20,0.5);
 }
+
+.container-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
