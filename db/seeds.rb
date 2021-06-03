@@ -7,6 +7,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require "open-uri"
 
 
 puts "Destroying bookings"
@@ -48,6 +49,9 @@ van1 = Van.new(
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
+file = URI.open('https://images.squarespace-cdn.com/content/v1/5cee2e21687a1500015aefb3/1581542572040-PJZZZ8TLPX62HJZNKWHA/ke17ZwdGBToddI8pDm48kGvciYz_F7e2cKgHl6aKbOB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0jG2lbcDYBOeMi4OFSYem8C6_1umBlU6AyzZibxGd5CiIyYt3UyZsjDc849ulGdbFA/high+ex+web.jpg?format=1000w')
+van1.photo.attach(io: file, filename: 'van-1.png', content_type: 'image/png')
+
 van1.save!
 
 van2 = Van.new(
@@ -59,6 +63,9 @@ van2 = Van.new(
   address: "Goudsesingel 580, 3011KS Rotterdam",
   description: "Classic van with room for 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
+
+file = URI.open('https://res.cloudinary.com/dsykouw6i/image/upload/v1622712955/photo-1601231091320-5ee5140fcd09_zka4wq.jpg')
+van2.photo.attach(io: file, filename: 'van-2.png', content_type: 'image/png')
 
 van2.save!
 
@@ -72,6 +79,10 @@ van3 = Van.new(
   description: "Huge van that up to 3 people can stay in. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
+file = URI.open('https://res.cloudinary.com/dsykouw6i/image/upload/v1622712544/Camper-interior-designs1_nbrhxw.jpg')
+van3.photo.attach(io: file, filename: 'van-3.png', content_type: 'image/png')
+
+
 van3.save!
 
 van4 = Van.new(
@@ -84,17 +95,22 @@ van4 = Van.new(
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
+file = URI.open('https://res.cloudinary.com/dsykouw6i/image/upload/v1622712544/eeef246d075a70c2456c83acaf479265_r5fk8f.jpg')
+van4.photo.attach(io: file, filename: 'van-4.png', content_type: 'image/png')
+
 van4.save!
 
 van5 = Van.new(
   user_id: user.id,
   capacity: 2,
   day_price: 70,
-  brand: "Mercedes",
-  model: "Sprinter",
+  brand: "VW",
+  model: "Transport 3",
   address: "Langerstraat 21, 1015 AK Amsterdam",
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
+file = URI.open('https://images.unsplash.com/photo-1515876305430-f06edab8282a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')
+van5.photo.attach(io: file, filename: 'van-5.png', content_type: 'image/png')
 
 van5.save!
 
@@ -108,17 +124,23 @@ van6 = Van.new(
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
+file = URI.open('https://images.unsplash.com/photo-1534437401535-8cdaa9b93ae4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80')
+van6.photo.attach(io: file, filename: 'van-6.png', content_type: 'image/png')
+
 van6.save!
 
 van7 = Van.new(
   user_id: user.id,
   capacity: 2,
   day_price: 40,
-  brand: "Ford",
-  model: "Transit",
+  brand: "Toyota",
+  model: "Hiace",
   address: "Plantage Muidergracht 14, 1018 TV Amsterdam",
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
+
+file = URI.open('https://images.unsplash.com/photo-1610511402844-c6b49f644a60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80')
+van7.photo.attach(io: file, filename: 'van-7.png', content_type: 'image/png')
 
 van7.save!
 
@@ -132,6 +154,9 @@ van8 = Van.new(
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
+file = URI.open('https://images.unsplash.com/photo-1516394399858-ae258cf724cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')
+van8.photo.attach(io: file, filename: 'van-8.png', content_type: 'image/png')
+
 van8.save!
 
 puts "Creating a new booking"
@@ -142,7 +167,6 @@ booking = Booking.new(
   start_date: Date.new(2021,6,10),
   end_date: Date.new(2021,6,11)
   )
-
 
 booking.save!
 

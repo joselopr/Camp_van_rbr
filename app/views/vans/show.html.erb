@@ -1,27 +1,29 @@
 <div class="container show-van mt-3">
   <div class="row top-show">
 
-    <div class="show-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/800x450/?campervan)">
+    <div class="show-image" style="background-image: url('<%= cl_image_path @van.photo.key, crop: :fit %>')">
       <div class="card-trip-capacity">
         <i class="fas fa-user-friends"></i> <%= @van.capacity %>
       </div>
     </div>
     <div class="reservation">
 
-      <div class="form">
+      <div class="form text-center">
         <!-- Price should be dynamic -->
-        <h4 class="card-trip-pricing"> € <%= @van.day_price %> / day</h4>
+        <h4 class="card-trip-pricing"> € <%= @van.day_price.round %> / day</h4>
         <%= simple_form_for [ @van, @booking ] do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
-          <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+          <h3 class="pt-3 pb-3">Total price €300</h3>
+          <%= f.submit "Submit Booking", class: "btn btn-flat" %>
         <% end %>
-        <h3>Total price €300</h3>
+
       </div>
     </div>
   </div>
   <div class="van-info mt-3">
     <div>
+      <%= link_to "< Back to vans", vans_path  %>
       <h2><%= @van.brand %> <%= @van.model %></h2>
       <p><%= @van.description %></p>
     </div>
