@@ -45,7 +45,7 @@ van1 = Van.new(
   day_price: 50,
   brand: "Ford",
   model: "Transit",
-  address: "IJsbaanpad 9, 1076 CV Amsterdam",
+  address: "wagenaarstraat 307, 1093CN Amsterdam",
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
@@ -75,7 +75,7 @@ van3 = Van.new(
   day_price: 80,
   brand: "Mercedes",
   model: "Sprinter",
-  address: "Damrak 9, 1012 LG Amsterdam",
+  address: "geuzenstraat 24, 1056KD Amsterdam",
   description: "Huge van that up to 3 people can stay in. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
@@ -91,7 +91,7 @@ van4 = Van.new(
   day_price: 60,
   brand: "Ford",
   model: "Transit",
-  address: "Spaklerweg 38, 1096 BA Amsterdam",
+  address: "Spaklerweg 38, 1096BA Amsterdam",
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
@@ -106,7 +106,7 @@ van5 = Van.new(
   day_price: 70,
   brand: "VW",
   model: "Transport 3",
-  address: "Langerstraat 21, 1015 AK Amsterdam",
+  address: "Langerstraat 21, 1015AK Amsterdam",
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 file = URI.open('https://images.unsplash.com/photo-1515876305430-f06edab8282a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')
@@ -120,7 +120,7 @@ van6 = Van.new(
   day_price: 65,
   brand: "VW",
   model: "Transporter",
-  address: "Buitenveldertselaan 184, 1081 AC Amsterdam",
+  address: "Buitenveldertselaan 184, 1081AC Amsterdam",
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 
@@ -135,7 +135,7 @@ van7 = Van.new(
   day_price: 40,
   brand: "Toyota",
   model: "Hiace",
-  address: "Plantage Muidergracht 14, 1018 TV Amsterdam",
+  address: "Plantage Muidergracht 14, 1018TV Amsterdam",
   description: "Self build van with space for 2 and tons of storage. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." # => not working => Faker::paragraph(sentence_count: 3)
   )
 

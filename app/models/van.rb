@@ -9,7 +9,7 @@ class Van < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   maximum_description = 1000
-  minimum_description = 100
+  minimum_description = 10
 
   validates :brand, presence: true, length: { minimum: 2 }
   validates :model, presence: true, length: { minimum: 3 }
