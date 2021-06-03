@@ -6,6 +6,7 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def create?
-    @record.van.user != user
+    true
+    # record.van.user != user do it in the controller
   end
 end

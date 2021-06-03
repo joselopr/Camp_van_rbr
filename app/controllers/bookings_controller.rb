@@ -4,8 +4,10 @@ class BookingsController < ApplicationController
     authorize @booking
     @van = Van.find(params[:van_id])
     @booking.van = @van
-    if booking.save
-      redirect_to @van
+    @booking.user = current_user
+    if @booking.save
+      redirect_to root_path
+      # should be redirected to the dashboard
     else
       render :new
     end
