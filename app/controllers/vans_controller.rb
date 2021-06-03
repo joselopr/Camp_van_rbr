@@ -15,6 +15,7 @@ class VansController < ApplicationController
   end
 
   def show
+   @booking = Booking.new
   end
 
   def new
@@ -35,14 +36,11 @@ class VansController < ApplicationController
 
   # def edit
   # end
-
   # def update
   # end
-
   # def destroy
   # end
   private
-
   def set_van
     @van = Van.find(params[:id])
     authorize @van
