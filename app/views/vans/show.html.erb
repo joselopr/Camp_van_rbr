@@ -12,8 +12,8 @@
         <!-- Price should be dynamic -->
         <h4 class="card-trip-pricing"> € <%= @van.day_price.round %> / day</h4>
         <%= simple_form_for [ @van, @booking ] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
+          <%= f.input :start_date, as: :string, input_html: {type: :date} %>
+          <%= f.input :end_date, as: :string, input_html: {type: :date} %>
           <h3 class="pt-3 pb-3">Total price €300</h3>
           <%= f.submit "Submit Booking", class: "btn btn-flat" %>
         <% end %>
