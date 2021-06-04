@@ -11,4 +11,7 @@ Rails.application.routes.draw do
    resources :bookings, only: [:create]
   end
 
+  get 'my_dashboard', to: 'dashboard#my_dashboard'
+
+
 end

@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="my-bookings col-6">
+      <% @bookings.each do |booking| %>
+      <h2><%= booking.start_date %> until <%= booking.end_date %> - €<%= booking.total_price.round %></h2>
+      <div class="status">
+        if <%  %>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="my_vans col-6">
+      <% @vans.each do |van| %>
+      <h2><%= van.brand %> <%= van.model %></h2>
+      <% end %>
+    </div>
+  </div>
+</div>
