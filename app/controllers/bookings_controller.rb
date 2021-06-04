@@ -10,7 +10,7 @@ before_action :find_booking, only: [:accept, :decline]
     # Calling method in booking model to calculate price
     @booking.calculate_total_price_booking
     if @booking.save
-      redirect_to root_path
+      redirect_to my_dashboard_path
       # should be redirected to the dashboard
     else
       render :new
