@@ -1,5 +1,8 @@
 class VansController < ApplicationController
   before_action :set_van, only: [:show]
+
+  # Allow unsigned-in users to see index page.
+  skip_before_action :authenticate_user!, only: [:index]
   def index
     @vans = policy_scope(Van)
 
