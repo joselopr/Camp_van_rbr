@@ -40,3 +40,19 @@
   background: #E14737;
   color: white;
 }
+
+.back-btn {
+  color: #c54a3e;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border-color: #c54a3e;
+  transition: background 0.2s ease;
+  font-size: 8pt;
+}
+
+.back-btn:hover {
+  color: #E14737;
+  border-color: #E14737;
+}
+
+
