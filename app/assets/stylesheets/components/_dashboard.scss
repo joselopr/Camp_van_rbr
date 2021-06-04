@@ -2,9 +2,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 16px;
   border-radius: 4px;
-  align-text: center;
 }
 
+.row {
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
 
 .card-product {
   overflow: hidden;
@@ -41,3 +45,6 @@
   text-align: center;
 }
 
+.status {
+  flex-direction: column;
+}
