@@ -21,14 +21,16 @@ class VansController < ApplicationController
     # Van id is already found with the before_action
     # Create new booking for child
     @booking = Booking.new
+    authorize @van
 
-    # @marker = @van.geocoded.map =
-    #   {
-    #     lat: @van.latitude,
-    #     lng: @van.longitude,
-    #     info_window: render_to_string(partial: "info_window", locals: { van: van }),
-    #     image_url: helpers.image_url('van.png')
-    #   }
+    @markers = [
+      {
+        lat: @van.latitude,
+        lng: @van.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { van: @van }),
+        image_url: helpers.image_url('van.png')
+      }
+    ]
   end
 
   def new
