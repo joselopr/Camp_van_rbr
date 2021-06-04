@@ -34,7 +34,7 @@
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 1;
   margin-bottom: 0;
   margin-top: 8px;
 
@@ -48,29 +48,30 @@
 .btn-flat-accept {
   color: white;
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 20px;
   background: #c54a3e;
   transition: background 0.2s ease;
 }
 
-.btn-flat-accpet:hover {
+.btn-flat-accept:hover {
   background: #E14737;
   color: white;
 }
 
 .btn-flat-reject {
-  color: white;
+  color: #c54a3e;
+  border-color: #c54a3e;
   padding: 8px 12px;
-  border-radius: 10px;
-  background: #c54a3e;
+  border-radius: 20px;
   transition: background 0.2s ease;
 }
 
 .btn-flat-reject:hover {
-  background: #E14737;
-  color: white;
+  color: #E14737;
+  border-color: #E14737;
 }
 
 .index-title {
   text-align: center;
 }
+
