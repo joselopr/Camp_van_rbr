@@ -159,17 +159,6 @@ van8.photo.attach(io: file, filename: 'van-8.png', content_type: 'image/png')
 
 van8.save!
 
-puts "Creating a new booking"
-
-booking = Booking.new(
-  van_id: van1.id,
-  user_id: user.id,
-  start_date: Date.new(2021,6,10),
-  end_date: Date.new(2021,6,11)
-  )
-
-booking.save!
-
 puts 'Finished creating user, van and booking!'
 
 
