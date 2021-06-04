@@ -1,0 +1,37 @@
+<div class="container">
+
+  <div class="row">
+    <div class="my-bookings col-6">
+      <% @vans.each do |van| %>
+        <% van.bookings.each do |van_booking| %>
+          <h2><%= van_booking.start_date %> until <%= van_booking.end_date %> - €<%= van_booking.total_price%></h2>
+          <div class="status">
+            <% if van_booking.status == "Pending" %>
+              <%= link_to "Accept", accept_booking_path(van_booking), method: :patch, class: "btn-accept" %>
+              <%= link_to "Decline", decline_booking_path(van_booking), method: :patch, class: "btn-decline" %>
+            <% else %>
+              <%= "This booking has been #{van_booking.status}" %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+
+      <% @bookings.each do |booking| %>
+        <h2><%= booking.start_date %> until <%= booking.end_date %> - €<%= booking.total_price%></h2>
+        <div class="status">
+          <% if booking.status == "Pending" %>
+            <%= "Waiting for approval!" %>
+          <% else %>
+            <%= "This booking has been #{booking.status}" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="my_vans col-6">
+      <% @vans.each do |van| %>
+      <h2><%= van.brand %> <%= van.model %></h2>
+      <% end %>
+    </div>
+  </div>
+</div>

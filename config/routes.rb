@@ -11,4 +11,14 @@ Rails.application.routes.draw do
    resources :bookings, only: [:create]
   end
 
+  resources :bookings, only: [:show] do
+    member do
+      patch :accept
+      patch :decline
+    end
+  end
+
+  get 'my_dashboard', to: 'dashboard#my_dashboard'
+
+
 end
