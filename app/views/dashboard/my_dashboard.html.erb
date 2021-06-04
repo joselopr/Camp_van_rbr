@@ -25,10 +25,10 @@
     <div class='status'>
       <p>
       <% if van_booking.status == "Pending" %>
-      <%= link_to "Accept", accept_booking_path(van_booking), method: :patch, class: "btn-flat-accept" %>
-      <%= link_to "Decline", decline_booking_path(van_booking), method: :patch, class: "btn-flat-reject" %>
+      <%= link_to "Accept", accept_booking_path(van_booking), method: :patch, class: "btn btn-flat-accept" %>
+      <%= link_to "Decline", decline_booking_path(van_booking), method: :patch, class: "btn btn-flat-reject" %>
       <% else %>
-      <%= "This booking has been #{van_booking.status}" %>
+      <strong><%= "This booking has been #{van_booking.status}" %></strong>
       <% end %>
     </p>
     </div>
@@ -63,7 +63,7 @@
        <% if booking.status == "Pending" %>
         <%= "Waiting for approval!" %>
         <% else %>
-        <%= "This booking has been #{booking.status}" %>
+        <strong><%= "This booking has been #{booking.status}" %></strong>
         <% end %>
      </p>
    </div>
