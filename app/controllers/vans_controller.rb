@@ -22,13 +22,13 @@ class VansController < ApplicationController
     # Create new booking for child
     @booking = Booking.new
 
-    @marker = @van.geocoded.map =
-      {
-        lat: @van.latitude,
-        lng: @van.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { van: van }),
-        image_url: helpers.image_url('van.png')
-      }
+    # @marker = @van.geocoded.map =
+    #   {
+    #     lat: @van.latitude,
+    #     lng: @van.longitude,
+    #     info_window: render_to_string(partial: "info_window", locals: { van: van }),
+    #     image_url: helpers.image_url('van.png')
+    #   }
   end
 
   def new
