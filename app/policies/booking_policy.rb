@@ -9,4 +9,12 @@ class BookingPolicy < ApplicationPolicy
     true
     # record.van.user != user do it in the controller
   end
+
+  def accept?
+    true if user
+  end
+
+  def decline?
+    true if user
+  end
 end
