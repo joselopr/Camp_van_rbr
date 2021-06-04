@@ -18,7 +18,9 @@ class VansController < ApplicationController
   end
 
   def show
-   @booking = Booking.new
+    # Van id is already found with the before_action
+    # Create new booking for child
+    @booking = Booking.new
   end
 
   def new
@@ -43,7 +45,9 @@ class VansController < ApplicationController
   # end
   # def destroy
   # end
+
   private
+
   def set_van
     @van = Van.find(params[:id])
     authorize @van
@@ -52,4 +56,6 @@ class VansController < ApplicationController
   def van_params
     params.require(:van).permit(:brand, :model, :capacity, :day_price, :description, :address, :photo)
   end
+
+
 end
